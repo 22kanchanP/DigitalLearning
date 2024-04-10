@@ -6,6 +6,8 @@ import Electronics from './Electronics'
 import Jwellery from './Jwellery'
 import MenCloths from './MenCloths'
 import WomenCloths from './WomenCloths'
+import Item from './Item'
+import ItemOne from './ItemOne'
 
 const Navbar = () => {
   return (
@@ -42,6 +44,10 @@ const Navbar = () => {
 
                     <Route path = "/mcloths" element = {<MenCloths></MenCloths>}></Route>
                     <Route path = "/fcloths" element = {<WomenCloths></WomenCloths>}></Route>
+
+                    <Route path = "/item" element = {<Item></Item>}></Route>
+
+                    <Route path = "/item1" element = {<ItemOne></ItemOne>}></Route>
                     
                     
                 </Routes>

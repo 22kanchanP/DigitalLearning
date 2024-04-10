@@ -7,17 +7,27 @@ import {
     MDBCardTitle,
     MDBCardText,
     MDBRow,
-    MDBCol
+    MDBCol,
+    MDBBtn
   } from 'mdb-react-ui-kit';
 import Footer from "./Footer";
+
+import { useNavigate } from "react-router-dom";
 
 function WomenCloths()
 {
     const [apidata,setApiData] = useState([])
+    const navi = useNavigate()
 
     useEffect(()=>{
         getData()
     },[])
+
+    function hello(pid)
+    {
+        const data = {proid : pid}
+        navi("./item" , {state : data} )
+    }
 
     async function getData()
     {
@@ -56,6 +66,8 @@ function WomenCloths()
                             <MDBCardText>
                            {item.description}
                             </MDBCardText>
+
+                            <MDBBtn onClick={()=>hello(item.id)}> View details {item.id}</MDBBtn>
                         </MDBCardBody>
                         </MDBCard>
                     </MDBCol>)

@@ -29,7 +29,6 @@ function MenCloths()
 
         setApiData(data)
 
-       
     }
     console.log(apidata)
     return(
