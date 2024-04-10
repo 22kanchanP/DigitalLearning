@@ -55,13 +55,13 @@ function Item()
               <center>  <MDBCardTitle>{apidata.title}</MDBCardTitle>
                             <MDBCardTitle style = {{color : "red"}}>{apidata.price*80} Rs</MDBCardTitle>
                             <MDBCardTitle style = {{color : "green"}}>{apidata.category}</MDBCardTitle>
-                            <MDBCardTitle style = {{color : "blue"}}>{apidata.rating.rate}</MDBCardTitle>
-                            <MDBCardTitle style = {{color : "green"}}>{apidata.rating.count}</MDBCardTitle>
+                           
+                            
                             <MDBCardText>
-                           {apidata.description.slice(0,50)}
+                           {apidata.description}
                             </MDBCardText></center>
-                    <center><MDBBtn href='#'>Button</MDBBtn>
-                    <MDBBtn href='#'>Button</MDBBtn></center>
+                    <center><MDBBtn href='#'>Add to cart</MDBBtn>
+                    <MDBBtn href='#'>Back</MDBBtn></center>
                 </MDBCardBody>
                 </MDBCard>  
         </div>
